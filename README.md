@@ -1,4 +1,4 @@
-![Banner](/assets/Mini%20Tutorials%20Banner.png)
+![Banner](/assets/Mini-Tutorials-Banner.gif)
 
 # 🧠 Mini Tutorials
 
@@ -16,7 +16,7 @@ Each subfolder is a self-contained mini tutorial with:
 
 ## 🚀 Tutorials List
 
-- [🔁 Logo Slider](./logo-slider/)
+1. [🔁 Infinite Logo Slider](./01-Infinite-Logo-Slider/)
 
 ---
 
