@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Infinite Logo Slider</title>
+  </head>
+  <body>
+    <div class="logo-slider">
+      <div class="logo-track">
+        <!-- Logo images start -->
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+          alt="React"
+        />
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+          alt="JavaScript"
+        />
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+          alt="HTML5"
+        />
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+          alt="CSS3"
+        />
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+          alt="Figma"
+        />
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+          alt="GitHub"
+        />
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+          alt="Node.js"
+        />
+        <img
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+          alt="MongoDB"
+        />
+        <!-- Add as many logos as you want here or replace with your own -->
+      </div>
+    </div>
+
+    <script>
+      // Get the slider container
+      const slider = document.querySelector(".logo-slider");
+
+      // Get the logo track and all logo images inside
+      const track = document.querySelector(".logo-track");
+      const logos = Array.from(track.children);
+
+      // Clone all logos and append them to the end to create an infinite loop
+      logos.forEach((logo) => {
+        const clone = logo.cloneNode(true);
+        track.appendChild(clone);
+      });
+
+      // Pause animation on hover
+      slider.addEventListener("mouseover", function () {
+        document.querySelector(".logo-track").style.animationPlayState =
+          "paused";
+      });
+
+      // Resume animation when hover ends
+      slider.addEventListener("mouseout", function () {
+        document.querySelector(".logo-track").style.animationPlayState =
+          "running";
+      });
+    </script>
+  </body>
+</html>

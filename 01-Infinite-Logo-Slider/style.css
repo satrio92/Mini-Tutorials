@@ -1,0 +1,44 @@
+/* Reset default margin and padding, set a light background */
+body {
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+}
+
+.logo-slider {
+  overflow: hidden; /* Hide overflowing logos for smooth scroll effect */
+  white-space: nowrap; /* Prevent line break */
+  width: 100%;
+  padding: 3rem 0; /* Vertical spacing */
+  background: #fff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.logo-track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 25s linear infinite; /* Continuous scrolling effect */
+}
+
+.logo-track img {
+  height: 85px;
+  margin: 0 3rem; /* Horizontal spacing between logos */
+  vertical-align: middle;
+  transition: transform 0.3s ease; /* Smooth scale on hover */
+}
+
+/* Enlarge logo slightly on hover for interactivity */
+.logo-track img:hover {
+  transform: scale(1.2);
+}
+
+/* Keyframes to create leftward scrolling effect */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move left by 50% of the track width */
+  }
+}
